@@ -3,12 +3,12 @@
 # NOTE: This file is slightly different than the video, because nginx versions have been updated 
 #       to match the latest standards from docker hub... but it's doing the same thing as the video
 #       describes
-FROM node
+FROM node:latest
 # all images must have a FROM
 # usually from a minimal Linux distribution like debian or (even better) alpine
 # if you truly want to start with an empty container, use FROM scratch
 
-WORKDIR /opt/apl/nodejsapp
+# WORKDIR /opt/apl/nodejsapp
 
 EXPOSE 3000
 # expose these ports on the docker virtual network
