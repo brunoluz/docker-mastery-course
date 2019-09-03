@@ -1,0 +1,5 @@
+docker container run -d --name postgres_old -p 5432:5432 -v /home/bruno/Documents/git/brunoluz/docker-mastery-course/49_volume_updgrade_database/volume:/var/lib/postgresql/data postgres:9.6.1
+
+docker container stop postgres_old
+docker container run -d --name postgres_new -p 5432:5432 -v /home/bruno/Documents/git/brunoluz/docker-mastery-course/49_volume_updgrade_database/volume:/var/lib/postgresql/data postgres:9.6.2
+docker container logs postgres_new
