@@ -1,0 +1,1 @@
+docker container run -d -p 80:4000 -v /Users/brunoluz/Documents/git/brunoluz/docker-mastery-course/51_edit_code_running_in_containers/src:/site bretfisher/jekyll-serve
