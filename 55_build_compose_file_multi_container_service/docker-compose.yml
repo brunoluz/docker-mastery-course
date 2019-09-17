@@ -1,0 +1,17 @@
+version: '3'
+
+services: 
+  db:
+    image: postgres
+    container_name: database
+    environment: 
+      POSTGRES_PASSWORD: 123
+    restart: always
+  web:
+    image: drupal
+    container_name: ui
+    depends_on: 
+      - db
+    ports: 
+      - "8080:8080"
+    restart: always
